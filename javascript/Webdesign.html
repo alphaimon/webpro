@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="list" content="animes" >
+    <meta charset="utf-8">
+    
+    
+    <link rel="stylesheet" href="Sytlesheets.css"> 
+
+
+    <title>Experiment01</title>
+
+
+</head>
+
+<body>
+
+
+    <img src="photos/DBZ Cover.jpg" title="Randomly selected picture" alt="Gaurbage">
+
+
+<h1>Welcome to my webpage :)</h1>
+<h2>What Can JavaScript Do?</h2>
+
+<p id="AskForNumber">If you want my contact number</p> 
+
+<button type="button" onclick='document.getElementById("AskForNumber")
+.innerHTML = "+88 017384 - 40930"'>Click Here  </button>
+
+<p> Welcome to my webpage, I hope that you'll find my webpage useful. </p>
+
+<br><br>
+
+<p>If you're intrested in learning Javascript </p>
+
+    <a href="www.w3schools.com/js/js_intro.asp">Click Here</a>
+
+    <img src="photos/My table.jpg" width="800" height="450" />
+
+<h2 style="color: white;">
+
+    <i>  Here is my Anime List. This list contains all the animes I've watched so far. <br>
+    Enjoy :)  </i>
+
+</h2>
+<h3>You can use the buttons to sort the table </h3>
+
+<style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.30s;
+      cursor: pointer;
+      
+    }
+    
+    .green {
+      background-color: lightgreen; 
+      color: white; 
+      border: 2px solid #4CAF50;
+    }
+    
+    .green:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+    .blue {
+      background-color: rgb(33, 156, 212); 
+      color: white; 
+      border: 2px solid #008CBA;
+    }
+    
+    .blue:hover {
+      background-color: rgb(59, 219, 224);
+      color: white;
+    }
+    
+    .red {
+      background-color: darkred; 
+      color: white; 
+      border: 2px solid darkred;
+    }
+    
+    .red:hover {
+      background-color: crimson;
+      color: white;
+    }
+    
+    .orange {
+      background-color: rgba(255, 123, 0, 0.925);
+      color: white;
+      border: 2px solid #e7e7e7;
+    }
+    
+    .orange:hover { 
+      background-color: orange;
+      color: white;
+    }
+    
+    .black {
+      background-color: white;
+      color: black;
+      border: 2px solid #555555;
+    }
+    
+    .black:hover {
+      background-color: #555555;
+      color: white;
+    }
+    </style>
+    
+  
+    <button class="button red"; onclick = "sortNameTable()">Name</button>
+    <button class="button blue"; onclick="sortByRating()">Ratings</button>
+    <button class="button green"; onclick="sortByEpisodes()">Episodes</button>
+    <button class="button orange">Orange</button>
+    <button class="button black">Black</button>
+    
+
+    <!-- *** The following table contains a List of Anime that I've watched so far. 
+       and I've wasted a fing amount of time on fixing the tableSorting Funcions 
+       While the main error was in the Table it self
+       
+       The extra pieces of trash codes in the table pervented the entire 
+       project form going any forward***  -->
+
+
+<table id="AnimeTable" ; border="2"; align="center">
+
+    <th>Name</th>
+    <th>Rating</th>
+    <th>Genre</th>
+    <th>Seasons</th>
+    <th>Total Episodes</th>
+    <th>Movies</th>
+
+
+    <tr>
+        <td>Demon Lord Daimaou</td>
+        <td>5</td>
+        <td>Action, Fantasy, Comedy, Ecchi, Harem</td>
+        <td>1</td>
+        <td>12</td>
+        <td>None</td>
+    </tr>
+
+    <tr>
+        <td>Pokemon</td>
+        <td>4</td>
+        <td>Action, Comedy, Fantasy, Shounen</td>
+        <td>Unknown</td>
+        <td>Unknown</td>
+        <td>Unknown</td>
+    </tr>
+    
+    <tr>
+        <td>Sword Art Online</td>
+        <td>9</td>
+        <td>Acion, Isekai, Shounen, Magic</td>
+        <td>5</td>
+        <td>50+</td>
+        <td>3</td>
+    
+    </tr>
+    
+    <tr>
+        <td>Cautious Hero</td>
+        <td>7</td>
+        <td>Action, Comedy, Fantasy, Romance</td>
+        <td>1</td>
+        <td>12</td>
+        <td>None</td>
+    
+    </tr>
+
+    <tr>
+        <td>UQ Holder</td>
+        <td>7</td>
+        <td>Action, Fantasy, Magic,Comedy</td>
+        <td>1</td>
+        <td>12</td>
+        <td>None</td>
+    
+    </tr>
+    
+    <tr>
+        <td>The 8th Son</td>
+        <td>8</td>
+        <td>Acion, Fantasy, Magic</td>
+        <td>1</td>
+        <td>12</td>
+        <td>None</td>
+    
+    </tr>
+
+    <tr>
+        <td>Bunny Girl Senpai</td>
+        <td>7</td>
+        <td>Comedy, Fantasy, Supernatural</td>
+        <td>1</td>    <td>12</td>
+        <td>None</td>
+    
+    </tr>
+    
+    <tr>
+        <td>Misfit of Deamon King Academy</td>
+        <td>8</td>    
+        <td>Action, Fantasy, School</td>
+        <td>Unknown</td>
+        <td>Unknown</td>
+        <td>Unknown</td>
+    </tr>
+
+</table>
+
+<div id="Ending"; style="background: black; color: aqua;">
+<h2 style="color: white; font-style: italic; border: 1.95px solid black;">
+    You can find every single one of the anime listed above on Kissanime.ru
+    & <br>
+    If you don't wanna die please don't click this buttom
+</h2>
+
+<button type="button" onclick='window.alert("you are dead")'>click Me</button>
+</div>
+
+<script>
+
+  function sortByRating() {
+  
+  var table, rows, switching, i, x, y, shouldSwitch;
+  
+  table = document.getElementById("AnimeTable");
+  switching = true;
+  
+  /* make a loop that'll continue till no swticing is done*/
+  
+  while(switching) {
+      // starts by saying no switching is done
+      switching = false;
+      rows = table.rows;
+      // loop thorugh all the row expect the 1st one,
+      // it contains header
+      for (i= 1; i< (rows.length -1); i++)
+      {
+          // starts by saying there wont be any switching
+          shouldSwitch = false;
+  
+          // Get any two element to compare one form current and another form nest row
+        
+          x = rows[i].getElementsByTagName('TD')[1];
+          y = rows[i+ 1].getElementsByTagName("TD")[1];
+  
+          // super careful about element and elements
+  
+          //checks is two rows should switch:
+  
+          if (x.innerHTML < y.innerHTML )
+          {
+              // mark as a swich and breaks the loop:
+  
+              shouldSwitch = true;
+              break;
+          }
+      } // end of for loop for a single iteration
+  
+      if (shouldSwitch) {
+          // is a swich has been marked, makes the switch
+          // and marks the switch has been done
+  
+          rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+          switching = true;
+        
+      }
+  }
+  }
+  
+  function sortNameTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("AnimeTable");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      // Check if the two rows should switch place:
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        // If so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+
+  // How can I get this fuction to work????
+  
+  // function sortByEpisodes() {
+    
+  //   var table, rows, switching, i, x, y, shouldSwitch;
+  
+  //   table = document.getElementById("AnimeTable");
+  //   switching = true;
+  
+  //   /* make a loop that'll continue till no swticing is done*/
+  
+  //   while(switching) {
+  //       // starts by saying no switching is done
+  //       switching = false;
+  
+  //       rows = table.rows;
+  //       // loop thorugh all the row expect the 1st one,
+  //       // it contains header
+  //       for (i= 1; i< (rows.length -1); i++)
+  //       {
+  //           // starts by saying there wont be any switching
+  //           shouldSwitch = false;
+  
+  //           // Get any two element to compare one form current and another form nest row
+          
+  //           x = rows[i].getElementsByTagName('TD')[0];
+  //           y = rows[i+ 1].getElementsByTagName("TD")[0];
+  
+  //           // super careful about element and elements
+  
+  //           //checks is two rows should switch:
+  
+  //           if(x.innerHTM > y.innerHTML )
+  //           if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase() ){
+  //               // mark as a swich and breaks the loop:
+  
+  //               shouldSwitch = true;
+  //               break;
+  //           }
+  //       } // end of for loop for a single iteration
+  
+  //       if (shouldSwitch) {
+  //           // is a swich has been marked, makes the switch
+  //           // and marks the switch has been done
+  
+  //           rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+  //           switching = true;
+          
+  //       }
+  //   }
+  // }
+  
+
+</script>  
+  
+</body>
+
+</html>

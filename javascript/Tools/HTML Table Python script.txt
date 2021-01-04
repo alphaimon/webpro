@@ -1,0 +1,21 @@
+
+while True:
+    name = input('Name: ')
+    rating = input("rating: ")
+    genre = input('Genre: ')
+    seasons = input('Seasons: ')
+    total_episodes = input("Total Episodes: ")
+    movies = input('Movies: ')
+
+    with open('anime_html_table.txt', 'a') as anime_list:
+        anime_list.write("\n<tr>\n")
+        anime_list.write(f"    <td>{name.title()}</td>\n")
+        anime_list.write(f"    <td>{rating}</td>\n")
+        anime_list.write(f"    <td>{genre.title()}</td>\n")
+        anime_list.write(f"    <td>{seasons}</td>\n")
+        anime_list.write(f"    <td>{total_episodes}</td>\n")
+        anime_list.write(f"    <td>{movies}</td>\n")
+        anime_list.write("\n</tr>\n")
+
+    if "q" in (name, rating, genre, seasons, total_episodes, movies):
+        break

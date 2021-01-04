@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Document</title>
+</head>head portion
+
+<body>
+    <h1>Welcome to my webpage :)</h1>
+
+    <h2>What Can JavaScript Do?</h2>
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo")
+.innerHTML = "This is  JavaScript!"'>Click Me!</button>
+
+
+<br><br>
+If you're intrested in learning Javascript
+<a href="www.w3schools.com/js/js_intro.asp">Click Here</a>
+
+
+<! the follwing js code currently runs in the background>
+<script src= "index.js"></script>
+
+
+<P>hover you mouse here</P>
+<button onmouseover="alert('move that you losser')">place here</button>
+
+
+
+<p>To see the local time, click [Current Time]</p>
+<button onclick="displayDate()">Current Time</button>
+<! the p karma is where the following codes yields output>
+<p id="karma"></p>
+
+<script>
+    function displayDate() {
+      document.getElementById("karma").innerHTML = Date();
+    }
+    </script>
+    
+    <img src="DBZ Cover.jpg" title="Randomly selected picture">
+
+
+
+</body>
+</html>
